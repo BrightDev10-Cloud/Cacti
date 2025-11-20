@@ -27,7 +27,7 @@ const perceptionRadius = 50;
 let state = 'FLOCKING'; // FLOCKING, FORMING
 let targetShape = [];
 let lastStateChange = Date.now();
-const stateDuration = 8000; // Switch every 8 seconds
+const stateDuration = 5000; // Switch every 5 seconds
 
 function resize() {
     width = canvas.width = window.innerWidth;
@@ -53,7 +53,7 @@ class Particle {
         this.velocity = { x: (Math.random() - 0.5) * maxSpeed, y: (Math.random() - 0.5) * maxSpeed };
         this.acceleration = { x: 0, y: 0 };
         this.size = Math.random() * 2 + 1;
-        this.color = '#54c802';
+        this.color = '#C3FFBD';
         this.target = null;
     }
 
